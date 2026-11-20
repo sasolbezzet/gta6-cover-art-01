@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice City Cover Studio · GTA VI Cover Art Generator</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="studio-app">
+  <aside class="sidebar">
+    <div class="brand-block">
+      <div class="pill-badge">OFFLINE · ZERO NETWORK · CLIENT CANVAS</div>
+      <h1>VICE CITY COVER STUDIO</h1>
+      <p class="tagline">Official GTA VI Multi-Panel Cover &amp; Poster Generator</p>
+    </div>
+
+    <!-- Size Preset -->
+    <div class="control-section">
+      <label class="section-title">1. Canvas Format &amp; Export Size</label>
+      <div class="btn-group" id="size-selector">
+        <button type="button" class="opt-btn active" data-size="square">Square 1080x1080</button>
+        <button type="button" class="opt-btn" data-size="portrait">Portrait 1080x1350</button>
+        <button type="button" class="opt-btn" data-size="landscape">Landscape 1920x1080</button>
+      </div>
+    </div>
+
+    <!-- Layout Grid -->
+    <div class="control-section">
+      <label class="section-title">2. Multi-Panel Layout</label>
+      <div class="btn-group" id="layout-selector">
+        <button type="button" class="opt-btn active" data-layout="grid4">4-Panel Grid</button>
+        <button type="button" class="opt-btn" data-layout="split3">3-Panel Split</button>
+        <button type="button" class="opt-btn" data-layout="single">Hero Poster</button>
+        <button type="button" class="opt-btn" data-layout="montage5">5-Panel Montage</button>
+      </div>
+    </div>
+
+    <!-- Color Grade -->
+    <div class="control-section">
+      <label class="section-title">3. Vice City Color Grading</label>
+      <div class="btn-group" id="grade-selector">
+        <button type="button" class="opt-btn active" data-grade="sunset">Neon Sunset</button>
+        <button type="button" class="opt-btn" data-grade="golden">Golden Hour</button>
+        <button type="button" class="opt-btn" data-grade="night">Vice Night</button>
+        <button type="button" class="opt-btn" data-grade="poster">Retro Inked</button>
+      </div>
+    </div>
+
+    <!-- Lettering & Typography -->
+    <div class="control-section">
+      <label class="section-title">4. Genre Lettering &amp; Captions</label>
+      <div class="input-stack">
+        <label>Main Title:
+          <input id="title-input" type="text" maxlength="32" value="SUNSET HEIST" placeholder="e.g. SUNSET HEIST">
+        </label>
+        <label>Subtitle / Sub-header:
+          <input id="sub-input" type="text" maxlength="40" value="VICE CITY · 2026" placeholder="e.g. VICE CITY · 2026">
+        </label>
+      </div>
+    </div>
+
+    <!-- Panel Photos -->
+    <div class="control-section">
+      <label class="section-title">5. Panel Photos &amp; Crop</label>
+      <div id="panel-slots-container" class="slots-container">
+        <!-- Rendered by main.js -->
+      </div>
+    </div>
+
+    <!-- Export Action -->
+    <div class="control-section export-section">
+      <button id="btn-export" class="action-btn" type="button">Export Lossless PNG</button>
+      <p id="export-status" class="status-msg"></p>
+    </div>
+  </aside>
+
+  <main class="canvas-viewport">
+    <div class="canvas-wrapper">
+      <canvas id="cover-canvas" width="1080" height="1080" aria-label="GTA 6 Cover Art Preview"></canvas>
+    </div>
+  </main>
+</div>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
