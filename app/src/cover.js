@@ -1,4 +1,4 @@
-// Vice City Cover Art Engine - Multi-panel layout, color grading & genre lettering
+// Vice City Cover Art Engine v1.0 - Multi-panel layout, color grading & genre lettering
 
 /**
  * Draws a multi-panel cover art onto the canvas.
